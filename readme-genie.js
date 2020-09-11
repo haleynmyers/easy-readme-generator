@@ -56,63 +56,58 @@ const prompts = [
   },
   {
     type: "input",
-    name: "contributors",
-    message: "Did anyone else contribute to this project? Enter their [name](and GitHub Username) here",
+    name: "contributing",
+    message: "What information does someone need in order to contribute to this project?",
   },
-  {
-    type: "input",
-    name: "questions",
-    message: "Other than email, what does the user need to know regarding questions they may have?",
-  },
+  
 ];
 
 
 function createMarkdown(response) {
-  return 
-  `# ${response.title}
+  return `
+# ${response.title}
 
-  ![GitHub license](https://img.shields.io/badge/license-${response.license}-blue.svg)
+![GitHub license](https://img.shields.io/badge/license-${response.license}-blue.svg)
 
-  ## Description
-  >${response.description}
+## Description
+>${response.description}
 
-  ![${picDescription}](${picture})
+![${picDescription}](${picture})
 
-  ## Table of Contents
-  * [Installation](#installation)
-  * [Usage](#usage)
-  * [License](#license)
-  * [Contributing](#contributing)
-  * [Tests](#tests)
-  * [Questions](#questions)
+## Table of Contents
+* [Installation](#installation)
+* [Usage](#usage)
+* [License](#license)
+* [Contributing](#contributing)
+* [Tests](#tests)
+* [Questions](#questions)
 
-  ## Installation
-  You will need to run
-  ${response.installation}
+## Installation
+You will need to run
+${response.installation}
 
-  ## Usage
-  ${response.usage}
+## Usage
+${response.usage}
 
-  ## License
-  ![GitHub license](https://img.shields.io/badge/license-${response.license}-blue.svg)
+## License
+![GitHub license](https://img.shields.io/badge/license-${response.license}-blue.svg)
 
-  ${response.license}
-  [Learn more about this license](https://opensource.guide/legal/#which-open-source-license-is-appropriate-for-my-project)
+${response.license}
+[Learn more about this license](https://opensource.guide/legal/#which-open-source-license-is-appropriate-for-my-project)
 
-  ## Contributors
-  Special thanks to
-  ${response.contributors}
+## Contributing
+${response.contributing}
 
-  ## Tests
-  You can use the following command to run tests
-  \`${response.tests}\`
+## Tests
+You can use the following command to run tests
+\`${response.tests}\`
 
-  ## Questions
-  ${response.questions}
-  [Visit my profile](https://github.com/${response.username})
-  For questions about this program or about contributing, please email me at ${response.email}
+## Questions
+${response.questions}
+[Visit my profile](https://github.com/${response.username})
+For questions about this program or about contributing, please email me at ${response.email}
 
-  `
+`
 };
 
 function writeToFile(fileName, data){
