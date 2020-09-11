@@ -1,7 +1,7 @@
 const fs = require("fs");
 const inquirer = require("inquirer");
 const path = require('path');
-// const createMarkdown = require('./createMarkdown');
+
 const prompts = [
   {
     type: "input",
@@ -22,6 +22,16 @@ const prompts = [
     type: "input",
     name: "description",
     message: "Please write a brief description of your project?",
+  },
+  {
+    type: "input",
+    name: "pictureURL",
+    message: "Enter the relative path or URL to an image you want displayed below your title.",
+  },
+  {
+    type: "input",
+    name: "picDescription",
+    message: "Please write a brief description of your image?",
   },
   {
     type: "list",
@@ -46,8 +56,8 @@ const prompts = [
   },
   {
     type: "input",
-    name: "contributing",
-    message: "What does the user need to know about contributing to the repo?",
+    name: "contributors",
+    message: "Did anyone else contribute to this project? Enter their [name](and GitHub Username) here",
   },
   {
     type: "input",
@@ -58,13 +68,15 @@ const prompts = [
 
 
 function createMarkdown(response) {
-  return `
-  # ${response.title}
+  return 
+  `# ${response.title}
 
   ![GitHub license](https://img.shields.io/badge/license-${response.license}-blue.svg)
 
   ## Description
-  ${response.description}
+  >${response.description}
+
+  ![${picDescription}](${picture})
 
   ## Table of Contents
   * [Installation](#installation)
@@ -73,26 +85,31 @@ function createMarkdown(response) {
   * [Contributing](#contributing)
   * [Tests](#tests)
   * [Questions](#questions)
-  
+
   ## Installation
+  You will need to run
   ${response.installation}
 
   ## Usage
   ${response.usage}
 
   ## License
+  ![GitHub license](https://img.shields.io/badge/license-${response.license}-blue.svg)
+
   ${response.license}
 
-  ## Contributing
-  ${response.contributing}
+  ## Contributors
+  Special thanks to
+  ${response.contributors}
 
   ## Tests
-  ${response.tests}
+  You can run the following command to run tests
+  \`${response.tests}\`
 
   ## Questions
   ${response.questions}
   Please email me at ${response.email}
-  
+
   `
 };
 
