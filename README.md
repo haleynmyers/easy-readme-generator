@@ -18,7 +18,9 @@ Use command line prompts to conveniently create a README directly to the current
 ## Installation
 First clone this repository into your project directory.
 You will need to run
-`npm init` then `npm install` to install all dependencies.
+`npm init -y` 
+`npm install --save` 
+`npm install inquirer --save`
 Within your integrated terminal, run 
 `node readme-genie.js` and it will walk you through step-by-step to create a README.md file in your current working directory.
 
@@ -28,6 +30,7 @@ This application should be used in an integrated terminal from VS Code (or equiv
 
 ## License
 MIT
+
 ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
 
 
