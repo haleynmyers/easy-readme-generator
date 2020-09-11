@@ -16,7 +16,7 @@ const prompts = [
   {
     type: "input",
     name: "title",
-    message: "What is your project name?",
+    message: "What is your project's name?",
   },
   {
     type: "input",
@@ -24,20 +24,10 @@ const prompts = [
     message: "Please write a brief description of your project?",
   },
   {
-    type: "input",
-    name: "pictureURL",
-    message: "Enter the relative path or URL to an image you want displayed below your title.",
-  },
-  {
-    type: "input",
-    name: "picDescription",
-    message: "Please write a brief description of your image?",
-  },
-  {
     type: "list",
     name: "license",
     message: "Which license best suits your project?",
-    choices: ["MIT", "Apache 2.0", "GPL 3.0", "BSD 3", "other"]
+    choices: ["MIT", "Apache 2.0", "GPL 3.0", "BSD 3", "none"]
   },
   {
     type: "input",
@@ -71,8 +61,6 @@ function createMarkdown(response) {
 
 ## Description
 >${response.description}
-
-![${picDescription}](${picture})
 
 ## Table of Contents
 * [Installation](#installation)
