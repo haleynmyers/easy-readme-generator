@@ -97,18 +97,20 @@ function createMarkdown(response) {
   ![GitHub license](https://img.shields.io/badge/license-${response.license}-blue.svg)
 
   ${response.license}
+  [Learn more about this license](https://opensource.guide/legal/#which-open-source-license-is-appropriate-for-my-project)
 
   ## Contributors
   Special thanks to
   ${response.contributors}
 
   ## Tests
-  You can run the following command to run tests
+  You can use the following command to run tests
   \`${response.tests}\`
 
   ## Questions
   ${response.questions}
-  Please email me at ${response.email}
+  [Visit my profile](https://github.com/${response.username})
+  For questions about this program or about contributing, please email me at ${response.email}
 
   `
 };

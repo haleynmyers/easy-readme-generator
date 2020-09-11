@@ -1,10 +1,11 @@
 
-# Easy Readme Generator
+# Readme Genie
+>The Easy Readme Generator
 
 ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
 
 ## Description
->Use command line prompts to conveniently create a README directly to the current working directory.
+Use command line prompts to conveniently create a README directly to the current working directory.
 
 ## Table of Contents
 * [Installation](#installation)
@@ -19,7 +20,7 @@ First clone this repository into your project directory.
 You will need to run
 `npm init` then `npm install` to install all dependencies.
 Within your integrated terminal, run 
-`node readme-gen.js` and it will walk you through step-by-step to create a README.md file in your current working directory.
+`node readme-genie.js` and it will walk you through step-by-step to create a README.md file in your current working directory.
 
 
 ## Usage
