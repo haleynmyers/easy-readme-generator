@@ -72,7 +72,7 @@ function createMarkdown(response) {
 
 ## Installation
 You will need to run
-${response.installation}
+\`${response.installation}\`
 
 ## Usage
 ${response.usage}
@@ -91,7 +91,6 @@ You can use the following command to run tests
 \`${response.tests}\`
 
 ## Questions
-${response.questions}
 [Visit my profile](https://github.com/${response.username})
 For questions about this program or about contributing, please email me at ${response.email}
 

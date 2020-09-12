@@ -17,12 +17,10 @@ Use command line prompts to conveniently create a README directly to the current
 
 ## Installation
 First clone this repository into your project directory.
-You will need to run
-`npm init -y` 
-`npm install --save` 
-`npm install inquirer --save`
-Within your integrated terminal, run 
-`node readme-genie.js` and it will walk you through step-by-step to create a README.md file in your current working directory.
+Within your integrated terminal, change directories to the newly-created readme-genie folder by running 
+`cd readme-genie` then 
+`node readme-genie.js`
+and it will walk you through step-by-step to create a README.md file in your current working directory.
 
 
 ## Usage
