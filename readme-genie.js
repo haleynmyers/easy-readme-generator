@@ -92,7 +92,7 @@ You can use the following command to run tests
 
 ## Questions
 [Visit my profile](https://github.com/${response.username})
-For questions about this program or about contributing, please email me at ${response.email}
+For questions about this program or about contributing, please email me at [${response.email}](mailto:${response.email})
 
 `
 };
